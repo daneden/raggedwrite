@@ -23,6 +23,15 @@
 
 .hentry {
   margin-bottom: $baseline*3;
+
+  sup[id*="fnref"] {
+    a {
+      font-family: $font-Sans;
+      text-decoration: none;
+
+      color: $light-gray;
+    }
+  }
 }
 
 .entry__header {
@@ -37,5 +46,21 @@
 
   .posts__entry {
     @extend .hentry;
+  }
+}
+
+.footnotes {
+  color: $light-gray;
+  font-family: $font-Sans;
+  font-size: .777777778rem;
+  line-height: 1.33333;
+
+  .caps {
+    font-family: $font-Sans-SC;
+  }
+
+  hr:first-child {
+    padding-top: 0;
+    margin: 0 auto $baseline;
   }
 }

@@ -1436,6 +1436,13 @@ pre {
   margin-bottom: 4.66667rem;
 }
 
+.hentry sup[id*="fnref"] a,
+.posts .posts__entry sup[id*="fnref"] a {
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  text-decoration: none;
+  color: #6b6c6d;
+}
+
 .entry__header .beta {
   padding-top: 0;
 }
@@ -1443,6 +1450,24 @@ pre {
 .posts {
   padding: 0;
   list-style: none;
+}
+
+.footnotes {
+  color: #6b6c6d;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-size: 11px;
+  font-size: .777777778rem;
+  line-height: 1.33333;
+}
+
+.footnotes .caps {
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+}
+
+.footnotes hr:first-child {
+  padding-top: 0;
+  margin: 0 auto 22px;
+  margin: 0 auto 1.55556rem;
 }
 
 /*-----------------------------------*\
