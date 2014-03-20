@@ -8,12 +8,12 @@
 \*-----------------------------------*/
 
 h1, .alpha, %alpha {
-  margin-bottom: $baseline*2;
+  margin-bottom: $baseline;
 
-  font-family: $font-Display;
-  font-size: $baseline*2;
-  font-weight: 900;
-  line-height: 1;
+  font-size: 1.333333333rem;
+  font-weight: 700;
+  letter-spacing: -.05em;
+  line-height: 1.166666667;
   orphans: 3;
   widows: 3;
 
@@ -24,37 +24,41 @@ h1, .alpha, %alpha {
 
     font-size: $baseline*1.2;
   }
-
-  .caps {
-    font-family: $font-Display;
-    letter-spacing: 0;
-  }
 }
 
 h2, .beta, %beta {
   padding-top: $baseline/2;
   margin-bottom: $baseline/2;
 
-  font-size: 1.384615385rem;
+  font-family: $font-Sans;
+  font-size: 1.166666667rem;
   font-weight: 400;
-  line-height: 1.2223;
+  letter-spacing: 0;
+  line-height: 1.333333333;
   orphans: 3;
   widows: 3;
 }
 
 h3, .gamma, %gamma {
-  padding-top: $baseline/2;
+
+  * + {
+    padding-top: $baseline/2;
+  }
+
   margin-bottom: $baseline/2;
 
-  @extend %caps;
-  font-size: 1rem;
+  font-family: $font-Sans-SC;
+  font-size: .888888889rem;
   font-weight: 400;
-  line-height: $baseline-unitless;
+  letter-spacing: .1em;
+  line-height: 1.75;
 }
 
 h4, .delta, %delta {
+  font-family: $font-Sans;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: $baseline-unitless;
 }
 
@@ -81,7 +85,7 @@ a, [data-href] {
   cursor: pointer;
 
   &:hover {
-    color: $blue;
+    color: $highlight;
   }
 }
 
@@ -149,9 +153,8 @@ blockquote {
   overflow: hidden;
   font-family: $font-Sans;
   padding-left: $baseline;
-  border-left: 2px solid $blue;
-  margin-left: -$baseline;
-  color: $gray;
+  border-left: 2px solid $highlight;
+  color: $light-gray;
 
   > :last-child {
     margin-bottom: 0;

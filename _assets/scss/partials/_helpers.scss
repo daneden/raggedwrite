@@ -39,6 +39,12 @@ p, .o--p, [class*="o--p--"], figure, blockquote, table, form, ul, ol, .img, pre,
   margin-bottom: $baseline/2;
 }
 
+// Quarter margin
+// This is getting a bit silly, isn’t it?
+.o--p--qm {
+  margin-bottom: $baseline/4;
+}
+
 // Negative margin
 .o--p--nm {
   margin-bottom: -$baseline;

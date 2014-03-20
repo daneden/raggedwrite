@@ -1,5 +1,4 @@
 # Ragged Write
-## Materials for the typographically inclined
 
 Hello, good evening, and welcome.
 

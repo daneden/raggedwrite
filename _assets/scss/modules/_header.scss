@@ -5,20 +5,39 @@
 \*-----------------------------------*/
 
 .site__header {
-  color: $gray;
+  margin-bottom: $baseline;
+
+  color: $lighter-gray;
+  background-color: $dark-gray;
+  box-shadow: inset 0 3px $highlight;
 }
 
   .site__title {
     text-decoration: none;
     margin-bottom: 0;
 
-    .title__sep {
-      color: $blue;
-      vertical-align: -.05em;
+    .title__main {
+      @extend %caps;
+
+      color: $subtle-gray;
+
+      em {
+        @extend %caps;
+
+        font-style: normal;
+
+        color: $light-gray;
+      }
     }
 
     .title__desc {
-      color: $light-gray;
+      display: block;
+
+      font-family: $font-Sans;
+      font-size: .888888889rem;
+      line-height: 1.75;
+
+      color: $lighter-gray;
     }
   }
 

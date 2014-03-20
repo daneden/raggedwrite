@@ -1,13 +1,36 @@
 ---
-layout: default
 title: Home
 ---
 
-<div>
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+{% include header.html %}
+
+  <main class="site__content post--single" role="main">
+
+    <div class="wrap">
+      <article class="grid">
+        <div class="grid__col--4-of-6">
+          <ul class="posts">
+            {% for post in site.posts %}
+              <li class="posts__entry">
+                <header class="entry__header">
+                  <p class="gamma entry__date meta o--p--qm">{{ post.date | pretty }} <a href="{{ post.url }}" title="Permalink to “{{ post.title }}”">&infin;</a></p>
+                  <h1 class="entry__title entry-title">
+                    {% if post.link %}
+                      <a class="delta" href="{{ post.link }}">{{ post.title | widont }} &rarr;</a>
+                    {% else %}
+                      {{ post.title | widont }}
+                    {% endif %}
+                  </h1>
+                </header>
+
+                {{ post.content }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+{% include footer.html %}

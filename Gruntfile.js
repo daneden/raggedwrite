@@ -81,7 +81,7 @@ module.exports = function(grunt) {
     jekyll: {
       dist: {
         options: {
-          drafts: true
+
         }
       }
     },

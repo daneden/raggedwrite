@@ -30,11 +30,11 @@
 \*-----------------------------------*/
 
 ::-moz-selection {
-  background-color: rgba(202, 193, 189, 0.5);
+  background-color: rgba(209, 209, 209, 0.5);
 }
 
 ::selection {
-  background-color: rgba(202, 193, 189, 0.5);
+  background-color: rgba(209, 209, 209, 0.5);
 }
 
 html {
@@ -48,7 +48,7 @@ html {
   -webkit-font-kerning: normal;
   -moz-font-kerning: normal;
   font-kerning: normal;
-  color: #5d4e47;
+  color: #1a1f28;
   background-color: #fff;
 }
 
@@ -99,6 +99,204 @@ body {
 
 img {
   max-width: 100%;
+}
+
+/*-----------------------------------*\
+
+  Partial: Typography
+
+  Low-level type things. Headings,
+  links, blockquotes, etc.
+
+\*-----------------------------------*/
+
+h1,
+.alpha {
+  margin-bottom: 22px;
+  margin-bottom: 1.55556rem;
+  font-size: 19px;
+  font-size: 1.333333333rem;
+  font-weight: 700;
+  letter-spacing: -.05em;
+  line-height: 1.166666667;
+  orphans: 3;
+  widows: 3;
+  color: #060709;
+}
+
+@media (max-width: 47.5em) {
+  h1,
+  .alpha {
+    margin-bottom: 22px;
+    margin-bottom: 1.55556rem;
+    font-size: 26px;
+    font-size: 1.86667rem;
+  }
+}
+
+h2,
+.beta {
+  padding-top: 11px;
+  padding-top: 0.77778rem;
+  margin-bottom: 11px;
+  margin-bottom: 0.77778rem;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-size: 16px;
+  font-size: 1.166666667rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.333333333;
+  orphans: 3;
+  widows: 3;
+}
+
+h3,
+.gamma {
+  margin-bottom: 11px;
+  margin-bottom: 0.77778rem;
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-size: 12px;
+  font-size: .888888889rem;
+  font-weight: 400;
+  letter-spacing: .1em;
+  line-height: 1.75;
+}
+
+h3 * +,
+.gamma * + {
+  padding-top: 11px;
+  padding-top: 0.77778rem;
+}
+
+h4,
+.delta {
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.55556;
+}
+
+.mega {
+  font-weight: 200;
+  font-size: 30px;
+  font-size: 2.153846154rem;
+  line-height: 1.178571429;
+}
+
+.promo {
+  text-align: center;
+}
+
+.subhead,
+.meta,
+figcaption {
+  color: #6b6c6d;
+}
+
+a,
+[data-href] {
+  text-decoration: underline;
+  color: inherit;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+a:hover,
+[data-href]:hover {
+  color: #dca604;
+}
+
+.a--plain {
+  text-decoration: none;
+}
+
+.caps,
+.site__title .title__main,
+.site__title .title__main em {
+  font-family: "Mercury SSm SC A", "Mercury SSm SC B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+strong,
+.strong {
+  font-weight: 700;
+}
+
+em,
+.em {
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid #f7f7f7;
+  width: 84px;
+  width: 6rem;
+  padding-top: 33px;
+  padding-top: 2.33333rem;
+  margin-top: -2px;
+  margin-right: auto;
+  margin-bottom: 44px;
+  margin-bottom: 3.11111rem;
+  margin-left: auto;
+}
+
+.hr--line {
+  margin-top: -1px;
+  height: 1px;
+  background-image: none;
+  background-color: #d1d1d1;
+}
+
+ul,
+ol {
+  padding-left: 1.35em;
+  overflow: hidden;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+dl dt {
+  font-weight: 700;
+}
+
+dl dd {
+  padding-left: 18px;
+  padding-left: 1.3rem;
+}
+
+blockquote {
+  overflow: hidden;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  padding-left: 22px;
+  padding-left: 1.55556rem;
+  border-left: 2px solid #dca604;
+  color: #6b6c6d;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 47.5em) {
+  blockquote {
+    margin-left: 0;
+  }
+}
+
+blockquote .caps {
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+}
+
+blockquote em {
+  font-style: normal;
 }
 
 /*-----------------------------------*\
@@ -162,6 +360,11 @@ pre:empty,
 .o--p--hm {
   margin-bottom: 11px;
   margin-bottom: 0.77778rem;
+}
+
+.o--p--qm {
+  margin-bottom: 5px;
+  margin-bottom: 0.38889rem;
 }
 
 .o--p--nm {
@@ -348,7 +551,8 @@ table th {
 .grid .grid__col--2-of-2,
 .grid .grid__col--3-of-3,
 .grid .grid__col--4-of-4,
-.grid .grid__col--5-of-5 {
+.grid .grid__col--5-of-5,
+.grid .grid__col--6-of-6 {
   width: 100%;
 }
 
@@ -399,7 +603,8 @@ table th {
 .grid .grid__col--2-of-2,
 .grid .grid__col--3-of-3,
 .grid .grid__col--4-of-4,
-.grid .grid__col--5-of-5 {
+.grid .grid__col--5-of-5,
+.grid .grid__col--6-of-6 {
   width: 95.5%;
   width: -webkit-calc(100% - 22px );
   width: -webkit-calc(100% - 1.55556rem );
@@ -579,7 +784,7 @@ table th {
 .nav .active,
 .nav ul .active {
   font-weight: 700;
-  color: #4d413d;
+  color: #060709;
 }
 
 .nav--inline {
@@ -602,206 +807,6 @@ table th {
 .img.img--centered {
   margin-left: auto;
   margin-right: auto;
-}
-
-/*-----------------------------------*\
-
-  Partial: Typography
-
-  Low-level type things. Headings,
-  links, blockquotes, etc.
-
-\*-----------------------------------*/
-
-h1,
-.alpha {
-  margin-bottom: 44px;
-  margin-bottom: 3.11111rem;
-  font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
-  font-size: 44px;
-  font-size: 3.11111rem;
-  font-weight: 900;
-  line-height: 1;
-  orphans: 3;
-  widows: 3;
-  color: #4d413d;
-}
-
-@media (max-width: 47.5em) {
-  h1,
-  .alpha {
-    margin-bottom: 22px;
-    margin-bottom: 1.55556rem;
-    font-size: 26px;
-    font-size: 1.86667rem;
-  }
-}
-
-h1 .caps,
-.alpha .caps {
-  font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
-  letter-spacing: 0;
-}
-
-h2,
-.beta,
-.quotes article ul li {
-  padding-top: 11px;
-  padding-top: 0.77778rem;
-  margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
-  font-size: 19px;
-  font-size: 1.384615385rem;
-  font-weight: 400;
-  line-height: 1.2223;
-  orphans: 3;
-  widows: 3;
-}
-
-h3,
-.gamma,
-.quotes article ul li > .caps {
-  padding-top: 11px;
-  padding-top: 0.77778rem;
-  margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
-  font-size: 14px;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.55556;
-}
-
-h4,
-.delta {
-  font-size: 14px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.55556;
-}
-
-.mega {
-  font-weight: 200;
-  font-size: 30px;
-  font-size: 2.153846154rem;
-  line-height: 1.178571429;
-}
-
-.promo {
-  text-align: center;
-}
-
-.subhead,
-.meta,
-figcaption,
-.quotes article ul li > .caps {
-  color: #94827b;
-}
-
-a,
-[data-href] {
-  text-decoration: underline;
-  color: inherit;
-  -webkit-transition: .2s;
-  transition: .2s;
-  cursor: pointer;
-}
-
-a:hover,
-[data-href]:hover {
-  color: #c64f52;
-}
-
-.a--plain {
-  text-decoration: none;
-}
-
-.caps,
-h3,
-.gamma,
-.quotes article ul li > .caps {
-  font-family: "Mercury SSm SC A", "Mercury SSm SC B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-}
-
-strong,
-.strong {
-  font-weight: 700;
-}
-
-em,
-.em {
-  font-style: italic;
-}
-
-hr {
-  border: none;
-  border-bottom: 2px solid #e0dbd8;
-  width: 84px;
-  width: 6rem;
-  padding-top: 33px;
-  padding-top: 2.33333rem;
-  margin-top: -2px;
-  margin-right: auto;
-  margin-bottom: 44px;
-  margin-bottom: 3.11111rem;
-  margin-left: auto;
-}
-
-.hr--line {
-  margin-top: -1px;
-  height: 1px;
-  background-image: none;
-  background-color: #cac1bd;
-}
-
-ul,
-ol {
-  padding-left: 1.35em;
-  overflow: hidden;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-}
-
-dl dt {
-  font-weight: 700;
-}
-
-dl dd {
-  padding-left: 18px;
-  padding-left: 1.3rem;
-}
-
-blockquote {
-  overflow: hidden;
-  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  padding-left: 22px;
-  padding-left: 1.55556rem;
-  border-left: 2px solid #c64f52;
-  margin-left: -22px;
-  margin-left: -1.55556rem;
-  color: #5d4e47;
-}
-
-blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 47.5em) {
-  blockquote {
-    margin-left: 0;
-  }
-}
-
-blockquote .caps {
-  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-}
-
-blockquote em {
-  font-style: normal;
 }
 
 /*-----------------------------------*\
@@ -942,7 +947,7 @@ table {
   table-layout: auto;
   text-align: left;
   border-radius: .25em;
-  border: 1px solid #e0dbd8;
+  border: 1px solid #f7f7f7;
 }
 
 table tr {
@@ -962,25 +967,25 @@ table th {
   display: table-cell;
   line-height: 1.5;
   white-space: nowrap;
-  border-top: 1px solid #e0dbd8;
-  border-bottom: 1px solid #e0dbd8;
+  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid #f7f7f7;
   border-collapse: collapse;
 }
 
 table td:first-child,
 table th:first-child {
   border-radius: .25em .25em 0 0;
-  border-left: 1px solid #e0dbd8;
+  border-left: 1px solid #f7f7f7;
 }
 
 table td:last-child,
 table th:last-child {
   border-radius: 0 0 .25em .25em;
-  border-right: 1px solid #e0dbd8;
+  border-right: 1px solid #f7f7f7;
 }
 
 table.table--striped tr:nth-child(even) {
-  background-color: #eeebe9;
+  background-color: white;
 }
 
 /*-----------------------------------*\
@@ -1067,17 +1072,14 @@ pre {
 .highlight {
   margin-bottom: 22px;
   margin-bottom: 1.55556rem;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   width: 100%;
-  margin-left: -21px;
-  margin-left: -1.5rem;
   padding: 11px 21px;
   padding: .75rem 1.5rem;
   overflow: scroll;
-  background-color: #4d413d;
-  color: #94827b;
+  background-color: #1a1f28;
+  color: #6b6c6d;
+  border-radius: 4px;
+  border-radius: .25rem;
 }
 
 .highlight * {
@@ -1371,7 +1373,12 @@ pre {
 \*-----------------------------------*/
 
 .site__header {
-  color: #5d4e47;
+  margin-bottom: 22px;
+  margin-bottom: 1.55556rem;
+  color: #d1d1d1;
+  background-color: #060709;
+  -webkit-box-shadow: inset 0 3px #dca604;
+  box-shadow: inset 0 3px #dca604;
 }
 
 .site__title {
@@ -1379,13 +1386,22 @@ pre {
   margin-bottom: 0;
 }
 
-.site__title .title__sep {
-  color: #c64f52;
-  vertical-align: -.05em;
+.site__title .title__main {
+  color: #f7f7f7;
+}
+
+.site__title .title__main em {
+  font-style: normal;
+  color: #6b6c6d;
 }
 
 .site__title .title__desc {
-  color: #94827b;
+  display: block;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-size: 12px;
+  font-size: .888888889rem;
+  line-height: 1.75;
+  color: #d1d1d1;
 }
 
 /*-----------------------------------*\
@@ -1405,8 +1421,8 @@ pre {
 .site__content {
   padding-top: 22px;
   padding-top: 1.55556rem;
-  padding-bottom: 65px;
-  padding-bottom: 4.66667rem;
+  padding-bottom: 22px;
+  padding-bottom: 1.55556rem;
 }
 
 @media screen and (max-width: 47.5em) {
@@ -1415,40 +1431,19 @@ pre {
   }
 }
 
-.entry__header {
-  padding-bottom: 11px;
-  padding-bottom: 0.77778rem;
+.hentry,
+.posts .posts__entry {
+  margin-bottom: 65px;
+  margin-bottom: 4.66667rem;
 }
 
-.quotes article ul {
-  text-align: center;
+.entry__header .beta {
+  padding-top: 0;
+}
+
+.posts {
+  padding: 0;
   list-style: none;
-  padding-left: 0;
-}
-
-.quotes article ul li {
-  padding: 44px 0;
-  padding: 3.11111rem 0;
-}
-
-.quotes article ul li > .caps {
-  display: block;
-}
-
-.quotes article ul li > .caps:before {
-  content: "";
-  display: block;
-  width: 28px;
-  width: 2rem;
-  padding-top: 11px;
-  padding-top: 0.77778rem;
-  border-bottom: 2px solid;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -2px;
-  margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
-  color: #c64f52;
 }
 
 /*-----------------------------------*\
@@ -1458,28 +1453,8 @@ pre {
 \*-----------------------------------*/
 
 .site__footer {
-  background-color: #433d3b;
-  color: #b9b0ad;
-}
-
-.footer__avatar {
-  width: 26px;
-  width: 1.86667rem;
-  height: 26px;
-  height: 1.86667rem;
-  position: absolute;
-  top: 9px;
-  top: 0.62222rem;
-  left: 0;
-  margin-left: -22px;
-  margin-left: -1.55556rem;
-  border-radius: 100%;
-}
-
-@media (max-width: 56em) {
-  .footer__avatar {
-    display: none;
-  }
+  color: #f7f7f7;
+  background-color: #060709;
 }
 
 /*===================================*\

@@ -14,15 +14,28 @@
 
 .site__content {
   padding-top: $baseline;
-  padding-bottom: $baseline*3;
+  padding-bottom: $baseline;
 
   @media screen and ( max-width: $breakpoint-small ) {
     padding-top: 0;
   }
 }
 
+.hentry {
+  margin-bottom: $baseline*3;
+}
+
 .entry__header {
-  padding: {
-    bottom: $baseline/2;
+  .beta {
+    padding-top: 0;
+  }
+}
+
+.posts {
+  padding: 0;
+  list-style: none;
+
+  .posts__entry {
+    @extend .hentry;
   }
 }

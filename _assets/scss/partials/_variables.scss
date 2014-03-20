@@ -20,23 +20,19 @@ $font-Serif-SC: "Mercury SSm SC A", "Mercury SSm SC B", $font-Serif;
 $font-Sans: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
 $font-Sans-SC: "Whitney SSm SC A", "Whitney SSm SC B", $font-Sans;
 
-$font-Display: "Chronicle Display A", "Chronicle Display B", $font-Serif;
 $font-Code: "Source Code Pro", Monaco, monospace;
 
 
 // Group: Colors
 $white: #fff; // Duh.
 
-$blue: adjust-hue(#4fb5c6, 170);
-$light-gray: adjust-hue(#7B8994, 170);
-$lighter-gray: adjust-hue(#BDC4CA, 170);
-$gray: adjust-hue(#47525D, 170);
-$dark-gray: adjust-hue(#3D464D, 170);
+$highlight: #DCA604;
+$light-gray: #6B6c6D;
+$lighter-gray: #d1d1d1;
+$gray: lighten(#060709, 10%);
+$dark-gray: #060709;
 
-$subtle-gray: adjust-hue(#d8dce0, 170);
-
-$green: #46933D;
-$red: #C32F39;
+$subtle-gray: lighten(#d1d1d1, 15%);
 
 // Group: Breakpoints
 $breakpoint-small: 47.5em;

@@ -127,7 +127,7 @@ $gutter: $baseline;
   }
 
   .grid__col--span-all, & > .span-all,
-  .grid__col--2-of-2, .grid__col--3-of-3, .grid__col--4-of-4, .grid__col--5-of-5 {
+  .grid__col--2-of-2, .grid__col--3-of-3, .grid__col--4-of-4, .grid__col--5-of-5, .grid__col--6-of-6 {
     @extend %span-all;
     width: 95.5%;
     width: calc( 100% - #{$gutter} );
