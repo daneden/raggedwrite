@@ -10,7 +10,7 @@ title: Home
       <article class="grid">
         <div class="grid__col--4-of-6">
           <ul class="posts">
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
               <li class="posts__entry">
                 <header class="entry__header">
                   <p class="gamma entry__date meta o--p--qm">{{ post.date | pretty }} <a href="{{ post.url }}" title="Permalink to “{{ post.title }}”">&infin;</a></p>
