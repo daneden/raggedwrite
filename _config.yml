@@ -1,0 +1,16 @@
+name: Ragged Write
+description: Materials for the typographically inclined
+url: http://raggedwrite.net
+
+markdown: rdiscount
+rdiscount:
+  extensions:
+    - smart
+    - generate_toc
+
+pygments: true
+
+permalink: pretty
+
+include: [".htaccess"]
+exclude: ["node_modules", "package.json", "config.rb", "Gruntfile.js"]

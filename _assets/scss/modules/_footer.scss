@@ -1,0 +1,25 @@
+/*-----------------------------------*\
+
+  Module: Footer
+
+\*-----------------------------------*/
+
+.site__footer {
+  background-color: mix(#393939, $dark-gray);
+  color: mix(#dfdfdf, $light-gray);
+}
+
+.footer__avatar {
+  width: $baseline*1.2;
+  height: $baseline*1.2;
+  position: absolute;
+  top: $baseline/2.5;
+  left: 0;
+  margin-left: -$baseline;
+
+  border-radius: 100%;
+
+  @media ( max-width: $breakpoint-medium ) {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+/*-----------------------------------*\
+
+  Partial: Reset
+
+  Blanket reset. For something less
+  volatile, I’d recommend Eric
+  Meyer’s reset.
+
+\*-----------------------------------*/
+
+// Sloppy reset. Applied to everything.
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  // Layout for dummies
+  box-sizing: border-box;
+  position: relative;
+}
+
+// Blanket ban on oversized images.
+img {
+  max-width: 100%;
+}
