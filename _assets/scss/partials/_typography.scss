@@ -111,21 +111,12 @@ hr {
   border: none;
   border-bottom: 2px solid $subtle-gray;
   width: 6rem;
-  padding-top: $baseline*1.5;
   margin: {
     top: -2px;
     right: auto;
-    bottom: $baseline*2;
+    bottom: $baseline;
     left: auto;
   }
-}
-
-.hr--line {
-  margin-top: -1px;
-  height: 1px;
-
-  background-image: none;
-  background-color: $lighter-gray;
 }
 
 // Remove this for hanging bullets

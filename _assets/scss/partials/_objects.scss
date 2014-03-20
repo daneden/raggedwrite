@@ -26,6 +26,22 @@
   }
 }
 
+.nav--ruled {
+  margin-bottom: 0;
+
+  a {
+    @extend %spit--v;
+
+    display: block;
+
+    text-decoration: none;
+  }
+
+  > li + li {
+    box-shadow: 0 -1px $lighter-gray;
+  }
+}
+
 .nav--inline {
   margin-bottom: 0;
 

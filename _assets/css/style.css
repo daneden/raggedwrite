@@ -236,20 +236,11 @@ hr {
   border-bottom: 2px solid #f7f7f7;
   width: 84px;
   width: 6rem;
-  padding-top: 33px;
-  padding-top: 2.33333rem;
   margin-top: -2px;
   margin-right: auto;
-  margin-bottom: 44px;
-  margin-bottom: 3.11111rem;
+  margin-bottom: 22px;
+  margin-bottom: 1.55556rem;
   margin-left: auto;
-}
-
-.hr--line {
-  margin-top: -1px;
-  height: 1px;
-  background-image: none;
-  background-color: #d1d1d1;
 }
 
 ul,
@@ -531,7 +522,8 @@ table th {
   padding: 0.38889rem;
 }
 
-.spit--v {
+.spit--v,
+.nav--ruled a {
   padding-top: 5px;
   padding-top: 0.38889rem;
   padding-bottom: 5px;
@@ -785,6 +777,20 @@ table th {
 .nav ul .active {
   font-weight: 700;
   color: #060709;
+}
+
+.nav--ruled {
+  margin-bottom: 0;
+}
+
+.nav--ruled a {
+  display: block;
+  text-decoration: none;
+}
+
+.nav--ruled > li + li {
+  -webkit-box-shadow: 0 -1px #d1d1d1;
+  box-shadow: 0 -1px #d1d1d1;
 }
 
 .nav--inline {
@@ -1464,10 +1470,44 @@ pre {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
 }
 
-.footnotes hr:first-child {
-  padding-top: 0;
-  margin: 0 auto 22px;
-  margin: 0 auto 1.55556rem;
+.sidebar__block {
+  margin-bottom: 22px;
+  margin-bottom: 1.55556rem;
+  font-size: 11px;
+  font-size: .777777778rem;
+  line-height: 1.33333;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  -webkit-box-shadow: inset 0 3px #dca604;
+  box-shadow: inset 0 3px #dca604;
+  background-color: #f7f7f7;
+  color: #1a1f28;
+}
+
+.sidebar__block .caps {
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+}
+
+.sidebar__block--ad a {
+  text-decoration: none;
+}
+
+.sidebar__block--ad .fusion-img {
+  float: left;
+  margin-right: 11px;
+  margin-right: 0.77778rem;
+  margin-bottom: 11px;
+  margin-bottom: 0.77778rem;
+}
+
+.sidebar__block--ad .fusion-poweredby {
+  clear: both;
+  margin-top: 11px;
+  margin-top: 0.77778rem;
+  display: block;
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  letter-spacing: .04em;
+  text-align: center;
+  color: #6b6c6d;
 }
 
 /*-----------------------------------*\

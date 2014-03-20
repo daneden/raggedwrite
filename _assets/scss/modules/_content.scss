@@ -58,9 +58,44 @@
   .caps {
     font-family: $font-Sans-SC;
   }
+}
 
-  hr:first-child {
-    padding-top: 0;
-    margin: 0 auto $baseline;
+.sidebar__block {
+  margin-bottom: $baseline;
+
+  font-size: .777777778rem;
+  line-height: 1.33333;
+  font-family: $font-Sans;
+
+  .caps {
+    font-family: $font-Sans-SC;
+  }
+
+  box-shadow: inset 0 3px $highlight;
+  background-color: $subtle-gray;
+  color: $gray;
+}
+
+.sidebar__block--ad {
+  a {
+      text-decoration: none;
+  }
+
+  .fusion-img {
+    float: left;
+    margin-right: $baseline/2;
+    margin-bottom: $baseline/2;
+  }
+
+  .fusion-poweredby {
+    clear: both;
+    margin-top: $baseline/2;
+    display: block;
+
+    font-family: $font-Sans-SC;
+    letter-spacing: .04em;
+    text-align: center;
+
+    color: $light-gray;
   }
 }
