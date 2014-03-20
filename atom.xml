@@ -11,6 +11,7 @@ layout: none
 		{% for post in site.posts %}
 			<item>
 				<title>{{ post.title }}</title>
+        <link>{{ site.url }}{{ post.url }}</link>
 				<published>{{ post.date | date_to_xmlschema }}</published>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <author>
