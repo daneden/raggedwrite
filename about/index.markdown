@@ -7,4 +7,4 @@ Ragged Write is a website about typography. A place for news, discussion, and co
 
 * * *
 
-The site is set in Hoefler & Co’s Mercury and Whitney. Learn more about the site in the [inaugural post](http://raggedwrite.dev/2014/03/20/welcome-to-ragged-write/).
+The site is set in Hoefler & Co’s Mercury and Whitney. Learn more about the site in the [inaugural post](/2014/03/20/welcome-to-ragged-write/).
