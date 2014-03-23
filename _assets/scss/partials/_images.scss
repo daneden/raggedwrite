@@ -71,28 +71,7 @@ figure {
 }
 
 .alignright {
-  @extend .grid__col--pull-1-of-4--right;
+  @extend .grid__col--1-of-4;
   float: right;
   margin-left: $baseline;
-  padding-right: $gutter;
-}
-
-@media ( max-width: $breakpoint-regular ) {
-  .alignleft {
-    margin-left: -13.5%;
-  }
-
-  .alignright {
-    margin-right: -13.5%;
-  }
-}
-
-@media ( max-width: $breakpoint-small ) {
-  .alignleft, .alignright {
-    float: none;
-    max-width: 100%;
-    margin: 0 auto;
-    margin-bottom: $baseline;
-    padding: 0;
-  }
 }

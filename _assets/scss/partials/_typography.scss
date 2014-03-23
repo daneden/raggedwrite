@@ -18,12 +18,6 @@ h1, .alpha, %alpha {
   widows: 3;
 
   color: $dark-gray;
-
-  @media (max-width: $breakpoint-small) {
-    margin-bottom: $baseline;
-
-    font-size: $baseline*1.2;
-  }
 }
 
 h2, .beta, %beta {
