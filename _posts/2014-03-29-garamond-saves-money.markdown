@@ -14,3 +14,5 @@ Madeleine Stix, for CNN:
 Another thing worth noting is the lack of mention of licensing in the research. Times New Roman can be found on every modern computer for the last couple of decades (with the exception of stock Android operating systems). Garamond doesn’t have quite the same ubiquity, and licensing every government computer would be a costly endeavor.
 
 Pessimism aside, this is impressive research by any measure, and may trigger not only nationwide change, but world-wide awareness of the economic advantages of typographic reviews.
+
+UPDATE: Thomas Finney actually [wrote](http://www.thomasphinney.com/2014/03/saving-400m-font/) about the issues behind executing this.
