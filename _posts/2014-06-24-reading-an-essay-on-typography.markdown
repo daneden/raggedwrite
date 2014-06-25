@@ -18,4 +18,6 @@ In hindsight, as I approached the end of the book, I realised the social comment
 
 Beyond the content of the essay, the copy I managed to get was beautifully set. Cast in Gill’s [Joanna](http://en.wikipedia.org/wiki/Joanna_(typeface))—a gorgeous transitional serif face with upright italics[^ess1]—and, surprisingly, justified ragged-right, the book was excellently proportioned and a great pleasure to hold, as one would expect from Gill and, today’s publisher of the essay, Penguin.
 
+A beautiful book with severe relevance even today. Pick up a copy of <span class="caps">Essay</span> [on Amazon](http://www.amazon.com/gp/product/B00G0ICUD6/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00G0ICUD6&linkCode=as2&tag=raggwrit-20&linkId=XMMBQDGSK73DCY5Q).
+
 [^ess1]: Read more about Joanna’s use in <span class="caps">Essay</span> [here](http://www.eyemagazine.com/feature/article/visions-of-joanna)
