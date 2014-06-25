@@ -4,8 +4,6 @@ url: http://raggedwrite.net
 
 markdown: kramdown
 
-pygments: true
-
 permalink: pretty
 
 include: [".htaccess"]

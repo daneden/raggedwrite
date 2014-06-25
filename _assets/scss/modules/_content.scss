@@ -22,14 +22,15 @@
 }
 
 .hentry {
-  margin-bottom: $baseline*3;
+  margin-bottom: $baseline*4;
 
   sup[id*="fnref"] {
     a {
       font-family: $font-Sans;
+      font-style: italic;
       text-decoration: none;
 
-      color: $light-gray;
+      color: $highlight;
     }
   }
 }
@@ -60,6 +61,12 @@
   }
 }
 
+.sidebar {
+  @media (min-width: 700px) {
+    border-left: 1px solid $subtle-gray;
+  }
+}
+
 .sidebar__block {
   margin-bottom: $baseline;
 
@@ -70,10 +77,6 @@
   .caps {
     font-family: $font-Sans-SC;
   }
-
-  box-shadow: inset 0 3px $highlight;
-  background-color: $subtle-gray;
-  color: $gray;
 }
 
 .sidebar__block--ad {
@@ -82,8 +85,8 @@
   }
 
   .fusion-img {
-    float: left;
-    margin-right: $baseline/2;
+    display: block;
+    margin: 0 auto;
     margin-bottom: $baseline/2;
   }
 

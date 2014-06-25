@@ -64,14 +64,14 @@ figure {
 }
 
 .alignleft {
-  @extend .grid__col--pull-1-of-4;
+  width: 25%;
   float: left;
   margin-right: $baseline;
-  padding-left: $gutter;
+  padding-left: $gutter-width;
 }
 
 .alignright {
-  @extend .grid__col--1-of-4;
+  width: 25%;
   float: right;
   margin-left: $baseline;
 }

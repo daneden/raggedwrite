@@ -7,7 +7,7 @@ module Jekyll
     class Markdown < Jekyll::Converter
       def convert(content)
         setup
-        return Typogruby.improve(Maruku.new(content).to_html)
+        return Typogruby.improve(Kramdown::Document.new(content).to_html)
       end
     end
   end
