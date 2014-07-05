@@ -8,6 +8,3 @@ permalink: pretty
 
 include: [".htaccess"]
 exclude: ["node_modules", "package.json", "config.rb", "Gruntfile.js"]
-
-paginate: 10
-paginate_path: "page:num"

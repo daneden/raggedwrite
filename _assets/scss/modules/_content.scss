@@ -12,17 +12,7 @@
 
 \*-----------------------------------*/
 
-.site__content {
-  padding-top: $baseline;
-  padding-bottom: $baseline;
-
-  @media screen and ( max-width: $breakpoint-small ) {
-    padding-top: 0;
-  }
-}
-
 .hentry {
-  margin-bottom: $baseline*4;
 
   sup[id*="fnref"] {
     a {
@@ -46,7 +36,61 @@
   list-style: none;
 
   .posts__entry {
-    @extend .hentry;
+    padding-top: $baseline;
+
+    @media (min-width: $breakpoint-small) {
+      font-size: $baseline/2;
+    }
+
+    border-bottom: 1px solid $lighter-gray;
+    border-right: 1px solid $lighter-gray;
+
+    &--ad {
+      background-color: $subtle-gray;
+    }
+
+    @media (min-width: 900px) {
+      &:nth-of-type(3n), &:last-of-type {
+        border-right: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      &:nth-of-type(2n), &:last-of-type {
+        border-right: none;
+      }
+    }
+
+    @media (max-width: $breakpoint-small) {
+      border-right: none;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: inherit;
+
+        .entry__title {
+          color: $highlight;
+        }
+      }
+    }
+
+    p {
+      hyphens: auto;
+      text-align: justify;
+    }
+
+    .entry__title {
+      @media (min-width: $breakpoint-small) {
+        margin-bottom: $baseline/2;
+
+        font-size: $baseline/2;
+        font-weight: 700;
+        line-height: $baseline-unitless;
+      }
+    }
   }
 }
 
@@ -63,7 +107,7 @@
 
 .sidebar {
   @media (min-width: 700px) {
-    border-left: 1px solid $subtle-gray;
+    border-left: 1px solid $lighter-gray;
   }
 }
 

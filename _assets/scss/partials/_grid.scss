@@ -51,7 +51,7 @@ $grid-column-namespace: "grid__col";
 $col-groups: (2, 3, 4, 6, 12);
 
 // Gutter width
-$gutter-width: 20px;
+$gutter-width: $baseline;
 
 // Breakpoints
 $breakpoint-medium: 700px;
@@ -59,40 +59,19 @@ $breakpoint-small: 480px;
 
 .#{$grid-namespace} {
   list-style: none;
-  margin-left: -$gutter-width;
+  display: flex;
+  flex-wrap: wrap;
 
-  > %span-all       { width: percentage(1/1); }
+  > %span-all       { flex-basis: percentage(1/1); }
 
-  > %one-half       { width: percentage(1/2); }
+  > %one-half       { flex-basis: percentage(1/2); }
 
-  > %one-third      { width: percentage(1/3); }
-  > %two-thirds     { width: percentage(2/3); }
+  > %one-third      { flex-basis: percentage(1/3); }
+  > %two-thirds     { flex-basis: percentage(2/3); }
 
-  > %one-quarter    { width: percentage(1/4); }
-  > %two-quarters   { width: percentage(2/4); }
-  > %three-quarters { width: percentage(3/4); }
-
-  > %push-span-all       { margin-left: percentage(1/1); }
-
-  > %push-one-half       { margin-left: percentage(1/2); }
-
-  > %push-one-third      { margin-left: percentage(1/3); }
-  > %push-two-thirds     { margin-left: percentage(2/3); }
-
-  > %push-one-quarter    { margin-left: percentage(1/4); }
-  > %push-two-quarters   { margin-left: percentage(2/4); }
-  > %push-three-quarters { margin-left: percentage(3/4); }
-
-  > %pull-span-all       { margin-left: -(percentage(1/1)); }
-
-  > %pull-one-half       { margin-left: -(percentage(1/2)); }
-
-  > %pull-one-third      { margin-left: -(percentage(1/3)); }
-  > %pull-two-thirds     { margin-left: -(percentage(2/3)); }
-
-  > %pull-one-quarter    { margin-left: -(percentage(1/4)); }
-  > %pull-two-quarters   { margin-left: -(percentage(2/4)); }
-  > %pull-three-quarters { margin-left: -(percentage(3/4)); }
+  > %one-quarter    { flex-basis: percentage(1/4); }
+  > %two-quarters   { flex-basis: percentage(2/4); }
+  > %three-quarters { flex-basis: percentage(3/4); }
 
   // For each of our column groups...
   @each $group in $col-groups {
@@ -117,53 +96,8 @@ $breakpoint-small: 480px;
           @extend %three-quarters;
         } @else {
 
-          width: percentage($i/$group);
-
-        }
-      }
-
-      > .#{$grid-column-namespace}--push-#{$i}-of-#{$group} {
-
-        @if percentage($i/$group) == percentage(1/1) {
-          @extend %push-span-all;
-        } @else if percentage($i/$group) == percentage(1/2) {
-          @extend %push-one-half;
-        } @else if percentage($i/$group) == percentage(1/3) {
-          @extend %push-one-third;
-        } @else if percentage($i/$group) == percentage(2/3) {
-          @extend %push-two-thirds;
-        } @else if percentage($i/$group) == percentage(1/4) {
-          @extend %push-one-quarter;
-        } @else if percentage($i/$group) == percentage(2/4) {
-          @extend %push-two-quarters;
-        } @else if percentage($i/$group) == percentage(3/4) {
-          @extend %push-three-quarters;
-        } @else {
-
-          margin-left: percentage($i/$group);
-
-        }
-      }
-
-      > .#{$grid-column-namespace}--pull-#{$i}-of-#{$group} {
-
-        @if percentage($i/$group) == percentage(1/1) {
-          @extend %pull-span-all;
-        } @else if percentage($i/$group) == percentage(1/2) {
-          @extend %pull-one-half;
-        } @else if percentage($i/$group) == percentage(1/3) {
-          @extend %pull-one-third;
-        } @else if percentage($i/$group) == percentage(2/3) {
-          @extend %pull-two-thirds;
-        } @else if percentage($i/$group) == percentage(1/4) {
-          @extend %pull-one-quarter;
-        } @else if percentage($i/$group) == percentage(2/4) {
-          @extend %pull-two-quarters;
-        } @else if percentage($i/$group) == percentage(3/4) {
-          @extend %pull-three-quarters;
-        } @else {
-
-          margin-left: -(percentage($i/$group));
+          flex-grow: $i;
+          flex-basis: percentage($i/$group);
 
         }
       }
@@ -174,14 +108,10 @@ $breakpoint-small: 480px;
   // All direct descendents of .grid get treated the same way.
   // This might be overkill for some, but it’s a time-saver for me.
   .#{$grid-column-namespace} {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    display: inline-block;
-    margin-right: -.25em;
-    min-height: 1px;
-    padding-left: $gutter-width;
-    vertical-align: top;
+    padding: {
+      left: $gutter-width/2;
+      right: $gutter-width/2;
+    }
 
     @media (max-width: $breakpoint-medium) {
       display: block;
@@ -190,26 +120,22 @@ $breakpoint-small: 480px;
       width: auto;
     }
 
-    @media (max-width: $breakpoint-medium) and (min-width: $breakpoint-small) {
-      &[class*="grid__col--m-"] {
-        display: inline-block;
-        margin-right: -.24em;
-      }
+    @media (max-width: 900px) and (min-width: 480px) {
 
       &.#{$grid-column-namespace}--m-1-of-2 {
-        width: percentage(1/2);
+        flex-basis: percentage(1/2);
       }
 
       &.#{$grid-column-namespace}--m-1-of-3 {
-        width: percentage(1/3);
+        flex-basis: percentage(1/3);
       }
 
       &.#{$grid-column-namespace}--m-1-of-3 {
-        width: percentage(2/3);
+        flex-basis: percentage(2/3);
       }
 
       &.#{$grid-column-namespace}--m-1-of-4 {
-        width: percentage(1/4);
+        flex-basis: percentage(1/4);
       }
 
       &.#{$grid-column-namespace}--m-2-of-4 {
@@ -217,38 +143,18 @@ $breakpoint-small: 480px;
       }
 
       &.#{$grid-column-namespace}--m-3-of-4 {
-        width: percentage(3/4);
+        flex-basis: percentage(3/4);
       }
     }
+  }
 
-    @media (max-width: $breakpoint-small) {
-      &[class*="grid__col--s-"] {
-        display: inline-block;
-        margin-right: -.24em;
-      }
+  @media (max-width: $breakpoint-small) {
+    display: block;
 
-      &.#{$grid-column-namespace}--s-1-of-2 {
-        width: percentage(1/2);
-      }
-
-      &.#{$grid-column-namespace}--s-1-of-3 {
-        width: percentage(1/3);
-      }
-
-      &.#{$grid-column-namespace}--s-1-of-3 {
-        width: percentage(2/3);
-      }
-
-      &.#{$grid-column-namespace}--s-1-of-4 {
-        width: percentage(1/4);
-      }
-
-      &.#{$grid-column-namespace}--s-2-of-4 {
-        @extend .#{$grid-column-namespace}--s-1-of-2;
-      }
-
-      &.#{$grid-column-namespace}--s-3-of-4 {
-        width: percentage(3/4);
+    .grid__col {
+      padding: {
+        left: 0;
+        right: 0;
       }
     }
   }

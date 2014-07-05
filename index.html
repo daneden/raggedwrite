@@ -7,29 +7,27 @@ title: Home
   <main class="site__content post--single" role="main">
 
     <div class="wrap">
-      <article class="grid">
-        <div class="grid__col grid__col--8-of-12">
-          <ul class="posts">
-            {% for post in paginator.posts %}
-              <li class="posts__entry">
-                <header class="entry__header">
-                  <p class="gamma entry__date meta o--p--qm">{{ post.date | pretty }} <a href="{{ post.url }}" title="Permalink to “{{ post.title }}”">&infin;</a></p>
-                  <h1 class="entry__title entry-title">
-                    {% if post.link %}
-                      <a class="delta" href="{{ post.link }}">{{ post.title | widont }} &rarr;</a>
-                    {% else %}
-                      {{ post.title | widont }}
-                    {% endif %}
-                  </h1>
-                </header>
+      <ul class="posts grid standalone">
+        {% for post in site.posts %}
+          {% if forloop.index == 3 %}
+            <li class="posts__entry posts__entry--ad grid__col grid__col--4-of-12 grid__col--m-1-of-2">
+              {% include ad.html %}
+            </li>
+          {% endif %}
+          <li class="posts__entry grid__col grid__col--4-of-12 grid__col--m-1-of-2">
+            <a href="{{post.url}}">
+              <header class="entry__header">
+                <p class="gamma entry__date meta standalone">{{ post.date | pretty }}</p>
+                <h1 class="entry__title entry-title">
+                  {{ post.title | widont }}
+                </h1>
+              </header>
 
-                {{ post.content }}
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% include sidebar.html %}
-      </article>
+              <p>{{ post.content | strip_html | truncatewords:35 }}</p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
 
   </main>

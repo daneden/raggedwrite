@@ -25,8 +25,7 @@ html {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
 
-  color: $gray;
-  background-color: #fff;
+  background-color: $gray;
 
   @media (max-width: $breakpoint-small) {
     font-size: 87.5%;
@@ -35,4 +34,7 @@ html {
 
 body {
   overflow-x: hidden;
+
+  background-color: #fff;
+  color: $gray;
 }

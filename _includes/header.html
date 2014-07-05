@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.name }}</title>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <meta name="p:domain_verify" content="aa712630840b421410cce3b56d2dc764" />
 
   {% bundle %}
@@ -18,14 +18,13 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
-  <header class="site__header" role="banner">
+  <header class="site__header promo island--v" role="banner">
     <div class="wrap cf">
 
       <div class="grid">
         <div class="grid__col grid__col--6-of-6">
-          <a class="site__title o--b island--v" href="/" title="{{ site.name }}">
-            <span class="title__main">Ragged <em>Write</em></span>
-            <span class="title__desc">{{ site.description }}</span>
+          <a class="site__title o--b" href="/" title="{{ site.name }}">
+            <img class="o--b title__typeplate" src="/static/images/raggedwrite.min.svg" alt="Ragged Write—Materials for the typographically inclined" />
           </a>
         </div>
       </div>

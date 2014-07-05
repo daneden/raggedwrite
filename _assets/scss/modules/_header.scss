@@ -5,42 +5,10 @@
 \*-----------------------------------*/
 
 .site__header {
-  margin-bottom: $baseline;
-
   color: #fff;
-  background-color: $highlight;
+  background-color: $gray;
 }
 
-  .site__title {
-    text-decoration: none;
-    margin-bottom: 0;
-
-    .title__main {
-      @extend %caps;
-
-      color: $subtle-gray;
-
-      em {
-        @extend %caps;
-
-        font-style: normal;
-
-        color: rgba(#fff, .5);
-      }
-    }
-
-    .title__desc {
-      display: block;
-
-      font-family: $font-Sans;
-      font-style: italic;
-      font-size: .888888889rem;
-      line-height: 1.75;
-
-      color: #fff;
-    }
-  }
-
-  .site__nav {
-
-  }
+.title__typeplate {
+	margin: 0 auto;
+}
