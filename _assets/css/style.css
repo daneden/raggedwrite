@@ -1419,8 +1419,8 @@ pre {
 \*-----------------------------------*/
 
 .site__header {
-  color: #fff;
-  background-color: #1a1f28;
+  -webkit-box-shadow: 0 1px #d1d1d1;
+  box-shadow: 0 1px #d1d1d1;
 }
 
 .title__typeplate {

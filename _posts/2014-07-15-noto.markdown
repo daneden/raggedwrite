@@ -1,0 +1,12 @@
+---
+layout: link
+link: http://www.google.com/get/noto/#/
+title: Google Noto
+date: 2014-07-15 19:15 -0800
+---
+
+Google’s [Noto](http://www.google.com/get/noto/#/) project is an ambitious one; design a family of typefaces that supports all the worlds languages, with a consistent visual appearance throughout.
+
+It’s also a somewhat flawed goal, if the research I’ve done is anything to go by. Showing [Neue Helvetica Arabic](http://www.linotype.com/670004/neue-helvetica-arabic-family.html) to native speakers of Arabic resulted in quite a surprising response: feedback suggested that the sans-serif typeface appeared juvenile, much like Comic Sans does to Westerners.
+
+That said, the notion of a type family with such wide language support and a consistent visual appearance is a relieving one.
